@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'BigN';
+    src: url('../fonts/BigNoodleTitling.eot');
+    src: url('../fonts/?#iefix') format('embedded-opentype'),
+        url('../fonts/BigNoodleTitling.woff2') format('woff2'),
+        url('../fonts/BigNoodleTitling.woff') format('woff'),
+        url('../fonts/BigNoodleTitling.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html{
+    scroll-behavior: smooth; /****pour scroller avec un effet *****/
+}
+/*******************debut header************************************/
+header{
+    background: url(/img/Archive/fond.jpg);
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav{
+    position: fixed; /**fixer dans le scroll**/
+    top: 50%;
+    left: 5%;
+}
+header nav ul {
+    height: 50px; /**hauteur de la UL**/
+    list-style: none; /* enleve les ronds de la liste */
+
+}
+header nav ul li{       
+    margin: 0 40px;
+    background: white;
+    opacity: 0.5;
+    border-bottom: 2px solid black;
+    padding: 10px;
+
+}
+header nav ul li a{
+    text-decoration: none; /* enleve le soulignement*/
+    color: rgb(10, 9, 9); /* couleur du texte*/
+   font-family: 'BigN'; /**change la famille de typo */
+    font-weight: normal; /**change la graisse de la typo*/
+    text-transform: uppercase; /**passe le texte en majiscule*/
+    font-size: 40px;
+    
+}
+header nav ul li a:hover{
+    text-decoration: line-through;/****barre le a lors de la nav****/
+    color: gray;
+
+}
+header>nav>ul> li:nth-child(3){
+    border-bottom:  none;
+
+}
+header div{
+    width: 250px;
+    height: 250px;
+    position: relative;/*****position relative pour le parent ********/
+}
+header div img{
+    width: 100%;
+    position: absolute;/**********position absolute pour les enfants*************/
+    top:0;
+    left: 0;
+}
+/********************fin du header*******************************/
+main{
+    display: flex;
+    justify-content: flex-end;
+    padding: 100px 0;
+}
+section{
+    width: 80%;
+    flex-wrap: wrap;
+    display: flex;
+}
+section>div{
+    overflow: hidden;
+    margin: 25px;
+  
+}
+section>div>div{
+    position: relative;
+    }
+
+
+
+section>div>div div{
+      width: 250px;/******largeur de la div*********/
+      height: 250px;
+      font-size: 20px;
+       font-family: 'BigN';
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: absolute;
+       top: 0;
+       left: 0;
+       background: black;
+       color: white;
+    opacity: 0.5;}
+    
+       
+
+section div h2{
+    text-transform: uppercase;
+
+}
+.haut div{
+    transform: translateY(200%);
+    transition: 1s;
+}
+.haut:hover div{
+    transform: translatey(0);
+}
+.bas div{
+    transform: translateX(-200%);
+    transition: 1s;
+}
+.bas:hover div{
+    transform: translateX(0);
+}
+footer {
+    height: 80vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer>div:first-of-type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 350px;
+}
+footer>div>div:first-of-type img {
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+}
+footer>div>div:nth-last-of-type(2){
+    color: white;
+    font-size: large;
+    margin: 20px;
+}
+footer div div p{
+    color: azure;
+    text-transform: uppercase;
+    font-family: 'BigN';
+}
